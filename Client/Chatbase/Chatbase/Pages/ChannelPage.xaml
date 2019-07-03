@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:BaseContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:pages="clr-namespace:Robo.Mvvm.Forms.Pages;assembly=Robo.Mvvm.Forms"
+    xmlns:selectors="clr-namespace:Chatbase.DataTemplates.Selectors"
+    xmlns:core="clr-namespace:Chatbase.Core;assembly=Chatbase.Core"
+    xmlns:vm="clr-namespace:Chatbase.Core.ViewModels;assembly=Chatbase.Core"
+    x:TypeArguments="vm:ChannelViewModel"
+    x:Class="Chatbase.Pages.ChannelPage">
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Column="0" Text="{x:Static core:AppInstance.Username}" 
+                   HorizontalOptions="Start" VerticalTextAlignment="Center" FontSize="Micro" />
+            
+            <Button Grid.Column="1" Text="{Binding Channel}" Clicked="Handle_Channel_Clicked"
+                    FontSize="Large" TextColor="Blue" FontAttributes="Bold" HorizontalOptions="Center" />
+            
+            <Button Grid.Column="2" Text="Logout" TextColor="Red" Command="{Binding LogoutCommand}" HorizontalOptions="EndAndExpand" />
+        </Grid>
+    </NavigationPage.TitleView>
+    <!--
+    <pages:BaseContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Command="{Binding LogoutCommand}" Order="Primary" />
+    </pages:BaseContentPage.ToolbarItems>
+    -->
+    <pages:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <selectors:MessageTemplateSelector x:Key="MessageTemplateSelector"/>
+        </ResourceDictionary>
+    </pages:BaseContentPage.Resources>
+    <pages:BaseContentPage.Content>
+        
+        <StackLayout>
+            
+            <ListView x:Name="messageList"
+                      ItemTemplate="{StaticResource MessageTemplateSelector}"
+                      ItemsSource="{Binding Messages}"
+                      SeparatorVisibility="None" 
+                      HasUnevenRows="true">
+            </ListView>
+            
+            <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="15,0,15,25">
+                <Entry Placeholder="Send message..." Text="{Binding Message}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Send" Command="{Binding SendMessageCommand}" />
+            </StackLayout>
+
+        </StackLayout>
+        
+    </pages:BaseContentPage.Content>
+</pages:BaseContentPage>

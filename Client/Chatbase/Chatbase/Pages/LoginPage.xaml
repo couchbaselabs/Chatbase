@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:BaseContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:pages="clr-namespace:Robo.Mvvm.Forms.Pages;assembly=Robo.Mvvm.Forms"
+    xmlns:vm="clr-namespace:Chatbase.Core.ViewModels;assembly=Chatbase.Core"
+    x:TypeArguments="vm:LoginViewModel"
+    x:Class="Chatbase.Pages.LoginPage">
+    <pages:BaseContentPage.Content>
+         <StackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Spacing="10" WidthRequest="300">
+                <Entry Placeholder="Enter username" Text="{Binding Username}" Keyboard="Email" />
+                <Entry Placeholder="Enter channel" Text="{Binding Channel}" Keyboard="Email" />
+            </StackLayout>
+            <Button Text="Login" Command="{Binding LoginCommand}" WidthRequest="125" HorizontalOptions="Center" />
+        </StackLayout>
+    </pages:BaseContentPage.Content>
+</pages:BaseContentPage>

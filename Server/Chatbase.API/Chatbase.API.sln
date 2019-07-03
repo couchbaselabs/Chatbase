@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatbase.API", "Chatbase.API\Chatbase.API.csproj", "{FD022249-E909-4688-BD49-D8480B634A1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatbase.API.Services", "Chatbase.API.Services\Chatbase.API.Services.csproj", "{C5798D03-32E9-45F1-95DC-4EA79280C5D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatbase.Models", "..\..\Client\Chatbase\Chatbase.Models\Chatbase.Models.csproj", "{DC1F5228-66D8-4CBB-BF41-19DF119F2529}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD022249-E909-4688-BD49-D8480B634A1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD022249-E909-4688-BD49-D8480B634A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD022249-E909-4688-BD49-D8480B634A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD022249-E909-4688-BD49-D8480B634A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5798D03-32E9-45F1-95DC-4EA79280C5D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5798D03-32E9-45F1-95DC-4EA79280C5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5798D03-32E9-45F1-95DC-4EA79280C5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5798D03-32E9-45F1-95DC-4EA79280C5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1F5228-66D8-4CBB-BF41-19DF119F2529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1F5228-66D8-4CBB-BF41-19DF119F2529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1F5228-66D8-4CBB-BF41-19DF119F2529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1F5228-66D8-4CBB-BF41-19DF119F2529}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
