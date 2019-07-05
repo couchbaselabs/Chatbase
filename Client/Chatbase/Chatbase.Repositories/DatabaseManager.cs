@@ -102,25 +102,32 @@ namespace Chatbase.Repositories
 
         public void Dispose()
         {
-            if (_replicator != null)
+            try
             {
-                StopReplication();
-
-                // Because the 'Stop' method for a Replicator instance is asynchronous 
-                // we must wait for the status activity to be stopped before closing the database. 
-                while (true)
+                if (_replicator != null)
                 {
-                    if (_replicator.Status.Activity == ReplicatorActivityLevel.Stopped)
+                    StopReplication();
+
+                    // Because the 'Stop' method for a Replicator instance is asynchronous 
+                    // we must wait for the status activity to be stopped before closing the database. 
+                    while (true)
                     {
-                        break;
+                        if (_replicator.Status.Activity == ReplicatorActivityLevel.Stopped)
+                        {
+                            break;
+                        }
                     }
+
+                    _replicator.Dispose();
                 }
 
-                _replicator.Dispose();
+                _database.Close();
+                _database = null;
             }
-
-            _database.Close();
-            _database = null;
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

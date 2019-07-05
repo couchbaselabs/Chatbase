@@ -22,6 +22,7 @@
     <Folder Include="DataTemplates\" />
     <Folder Include="DataTemplates\Selectors\" />
     <Folder Include="DataTemplates\ViewCells\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chatbase.Core\Chatbase.Core.csproj" />

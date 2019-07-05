@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:pages="clr-namespace:Robo.Mvvm.Forms.Pages;assembly=Robo.Mvvm.Forms"
     xmlns:selectors="clr-namespace:Chatbase.DataTemplates.Selectors"
+    xmlns:controls="clr-namespace:Chatbase.Controls"
     xmlns:core="clr-namespace:Chatbase.Core;assembly=Chatbase.Core"
     xmlns:vm="clr-namespace:Chatbase.Core.ViewModels;assembly=Chatbase.Core"
     x:TypeArguments="vm:ChannelViewModel"
@@ -16,20 +17,16 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
-            <Label Grid.Column="0" Text="{x:Static core:AppInstance.Username}" 
+            <Label Grid.Column="0" Text="{x:Static core:AppInstance.Username}" TextColor="Black"
                    HorizontalOptions="Start" VerticalTextAlignment="Center" FontSize="Micro" />
             
-            <Button Grid.Column="1" Text="{Binding Channel}" Clicked="Handle_Channel_Clicked"
-                    FontSize="Large" TextColor="Blue" FontAttributes="Bold" HorizontalOptions="Center" />
-            
-            <Button Grid.Column="2" Text="Logout" TextColor="Red" Command="{Binding LogoutCommand}" HorizontalOptions="EndAndExpand" />
+            <controls:TappableLabel Grid.Column="1" Text="{Binding Channel}" Tapped="Handle_Channel_Clicked"
+                FontSize="Large" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+                      
+            <controls:TappableLabel Grid.Column="2" Text="Logout" TextColor="Black" Margin="0,0,10,0"
+                                    TappedCommand="{Binding LogoutCommand}" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" />
         </Grid>
     </NavigationPage.TitleView>
-    <!--
-    <pages:BaseContentPage.ToolbarItems>
-        <ToolbarItem Text="Logout" Command="{Binding LogoutCommand}" Order="Primary" />
-    </pages:BaseContentPage.ToolbarItems>
-    -->
     <pages:BaseContentPage.Resources>
         <ResourceDictionary>
             <selectors:MessageTemplateSelector x:Key="MessageTemplateSelector"/>
@@ -46,7 +43,8 @@
                       HasUnevenRows="true">
             </ListView>
             
-            <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="15,0,15,25">
+            <StackLayout  BackgroundColor="#DCDCDC" VerticalOptions="End" 
+                          HorizontalOptions="FillAndExpand" Orientation="Horizontal" Padding="15,15,15,25">
                 <Entry Placeholder="Send message..." Text="{Binding Message}" HorizontalOptions="FillAndExpand" />
                 <Button Text="Send" Command="{Binding SendMessageCommand}" />
             </StackLayout>

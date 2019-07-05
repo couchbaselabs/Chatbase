@@ -1,10 +1,6 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 namespace Chatbase.Droid
@@ -21,6 +17,8 @@ namespace Chatbase.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            Acr.UserDialogs.UserDialogs.Init(this);
 
             Couchbase.Lite.Support.Droid.Activate(this);
 

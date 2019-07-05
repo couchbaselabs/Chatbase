@@ -8,7 +8,7 @@
             <Label Text=" - " FontSize="Micro" TextColor="Gray" />
             <Label Text="{Binding CreatedDateTime}" FontSize="Micro" TextColor="Gray" />
         </StackLayout>
-       <Frame BackgroundColor="LightBlue" Padding="10" HasShadow="false">
+       <Frame BackgroundColor="#ff9999" Padding="10" HasShadow="false">
            <Label Text="{Binding Text}"/>
         </Frame>
     </StackLayout>

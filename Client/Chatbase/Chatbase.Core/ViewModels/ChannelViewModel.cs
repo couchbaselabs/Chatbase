@@ -121,6 +121,8 @@ namespace Chatbase.Core.ViewModels
 
         public async Task SwitchChannelAsync(string channel)
         {
+            IsBusy = true;
+
             var session = await AuthenticationService.Authenticate(new User
             {
                 Username = AppInstance.Username,
@@ -134,10 +136,12 @@ namespace Chatbase.Core.ViewModels
                 AppInstance.Session = session;
                 AppInstance.Channel = channel;
 
-                await ChatRepository.StartReplication();
+                await ChatRepository.StartReplication().ConfigureAwait(false);
 
                 await InitAsync();
             }
+
+            IsBusy = false;
         }
 
         void Logout()

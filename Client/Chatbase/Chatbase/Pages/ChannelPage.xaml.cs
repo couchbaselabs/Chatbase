@@ -12,6 +12,8 @@ namespace Chatbase.Pages
         public ChannelPage()
         {
             InitializeComponent();
+
+            
         }
 
         protected override void OnAppearing()

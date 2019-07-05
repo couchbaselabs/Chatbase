@@ -7,12 +7,14 @@
     x:TypeArguments="vm:LoginViewModel"
     x:Class="Chatbase.Pages.LoginPage">
     <pages:BaseContentPage.Content>
-         <StackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+         <StackLayout Spacing="40" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <Image Source="logo" HorizontalOptions="Center" />
             <StackLayout Spacing="10" WidthRequest="300">
-                <Entry Placeholder="Enter username" Text="{Binding Username}" Keyboard="Email" />
-                <Entry Placeholder="Enter channel" Text="{Binding Channel}" Keyboard="Email" />
+                <Entry Placeholder="Enter username" Text="{Binding Username}" Keyboard="Email" HeightRequest="40" />
+                <Entry Placeholder="Enter channel" Text="{Binding Channel}" Keyboard="Email" HeightRequest="40" />
             </StackLayout>
-            <Button Text="Login" Command="{Binding LoginCommand}" WidthRequest="125" HorizontalOptions="Center" />
+            <Button Text="Login" Command="{Binding LoginCommand}" BackgroundColor="Red" TextColor="White"
+                    WidthRequest="125" HorizontalOptions="Center" Margin="0,10,0,0" />
         </StackLayout>
     </pages:BaseContentPage.Content>
 </pages:BaseContentPage>

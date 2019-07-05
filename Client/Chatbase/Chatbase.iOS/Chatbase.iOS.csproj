@@ -149,4 +149,8 @@
       <Name>Chatbase</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo%402x.png" />
+    <BundleResource Include="Resources\logo%403x.png" />
+  </ItemGroup>
 </Project>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Couchbase.Lite;
 using Chatbase.Core;
 using Chatbase.Core.Repositories;
@@ -28,14 +27,7 @@ namespace Chatbase.Repositories
         {
             _databaseName = databaseName;
 
-            try
-            {
-                Database.Log.Console.Level = Couchbase.Lite.Logging.LogLevel.Verbose;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            Database.Log.Console.Level = Couchbase.Lite.Logging.LogLevel.Verbose;
         }
 
         public Task StartReplication()

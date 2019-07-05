@@ -46,14 +46,13 @@ namespace Chatbase.Core.ViewModels
 
         async Task LoginAsync()
         {
-            // Feigning a login with our AuthApi
-            var credentials = new User
+            var user = new User
             {
                 Username = Username,
                 Channel = Channel
             };
 
-            var session = await AuthenticationService.Authenticate(credentials);
+            var session = await AuthenticationService.Authenticate(user);
 
             if (!string.IsNullOrEmpty(session?.session_id))
             {
