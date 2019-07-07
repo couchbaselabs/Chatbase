@@ -107,14 +107,14 @@ You will need to build and run the Chatbase.API solution before attempting to us
 Users are able to log into the app simply by entering a name and a Sync Gateway [channel](https://docs.couchbase.com/sync-gateway/current/data-routing.html#introduction-to-channels).
 
 <p>
-<img src="media/ios_login.png" width="300px" />
-<img src="media/android_login.png" width="300px" />
+<img src="media/iOS_Login.png" width="300px" />
+<img src="media/Android_Login.png" width="300px" />
 </p>
 
 After you've logged in you'll be taken to the channel's chat screen, and will be able to send messages.
 
-<img src="media/ios_chat.png" width="300px" />
-<img src="media/android_chat.png" width="300px" />
+<img src="media/iOS_Chat.png" width="300px" />
+<img src="media/Android_Chat.png" width="300px" />
 </p>
 
 You'll also be able to switch channels by tapping the navigation bar title, and entering in a new channel name.
