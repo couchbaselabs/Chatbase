@@ -113,6 +113,7 @@ Users are able to log into the app simply by entering a name and a Sync Gateway 
 
 After you've logged in you'll be taken to the channel's chat screen, and will be able to send messages.
 
+<p>
 <img src="media/iOS_Chat.png" width="300px" />
 <img src="media/Android_Chat.png" width="300px" />
 </p>
