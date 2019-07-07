@@ -121,4 +121,8 @@ After you've logged in you'll be taken to the channel's chat screen, and will be
 You'll also be able to switch channels by tapping the navigation bar title, and entering in a new channel name.
 
 <img src="media/switch_channel.png" width="300px" />
+
+## Support <a name="support"></a>
+
+If you have any questions, comments, or would like to contribute to this projects please reach out to me directly at robert.hedgpeth@couchbase.com or on [Twitter](https://twitter.com/probablyrealrob).
  
