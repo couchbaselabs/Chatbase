@@ -10,7 +10,7 @@ namespace Chatbase.API.Services
     {
         string _database;
 
-        public SyncService(string database) : base($"http://localhost:4985/")
+        public SyncService(string database) : base($"http://52.53.240.207:4985/")
         {
             _database = database;
         }
